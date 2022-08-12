@@ -1,4 +1,4 @@
-package ch10;
+package ch11;
 
 public class OperatorTest {
 
