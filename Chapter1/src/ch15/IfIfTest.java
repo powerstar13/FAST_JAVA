@@ -24,6 +24,6 @@ public class IfIfTest {
             System.out.println("일반인입니다.");
         }
 
-        System.out.println(String.format("입장료는 %s원입니다.", charge));
+        System.out.printf("입장료는 %s원입니다.%n", charge);
     }
 }
