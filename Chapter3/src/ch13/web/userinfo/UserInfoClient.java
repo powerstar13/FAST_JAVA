@@ -13,7 +13,7 @@ public class UserInfoClient {
 
     public static void main(String[] args) throws IOException {
 
-        FileInputStream fis = new FileInputStream("Chapter3/db.properties");
+        FileInputStream fis = new FileInputStream("Chapter3/src/ch13/db.properties");
 
         Properties prop = new Properties(); // key-value Pair로 읽어 들일 수 있는 객체이다.
         prop.load(fis);
