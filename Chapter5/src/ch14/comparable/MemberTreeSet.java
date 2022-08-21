@@ -1,18 +1,18 @@
-package ch13;
+package ch14.comparable;
 
-import java.util.HashSet;
 import java.util.Iterator;
+import java.util.TreeSet;
 
-public class MemberHashSet {
+public class MemberTreeSet {
 
-    private HashSet<Member> memberHashSet;
+    private TreeSet<Member> memberTreeSet;
 
-    public MemberHashSet() {
-        this.memberHashSet = new HashSet<>();
+    public MemberTreeSet() {
+        this.memberTreeSet = new TreeSet<>();
     }
 
     public void addMember(Member member) {
-        memberHashSet.add(member);
+        memberTreeSet.add(member);
     }
 
     /**
@@ -20,7 +20,7 @@ public class MemberHashSet {
      */
     public boolean removeMember(int memberId) {
 
-        Iterator<Member> ir = memberHashSet.iterator();
+        Iterator<Member> ir = memberTreeSet.iterator();
 
         while (ir.hasNext()) {
 
@@ -28,7 +28,7 @@ public class MemberHashSet {
 
             int tempId = member.getMemberId();
             if (tempId == memberId) {
-                memberHashSet.remove(member);
+                memberTreeSet.remove(member);
                 return true;
             }
         }
@@ -39,7 +39,7 @@ public class MemberHashSet {
 
     public void showAllMember() {
 
-        for (Member member : memberHashSet) {
+        for (Member member : memberTreeSet) {
             System.out.println(member);
         }
         System.out.println();

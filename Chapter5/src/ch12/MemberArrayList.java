@@ -20,7 +20,7 @@ public class MemberArrayList {
     }
 
     /**
-     * Iterator르 사용하는 방법
+     * Iterator를 사용하는 방법
      */
     public boolean removeMember(int memberId) {
 
