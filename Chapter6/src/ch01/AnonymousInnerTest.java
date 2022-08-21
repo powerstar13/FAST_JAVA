@@ -1,6 +1,6 @@
 package ch01;
 
-class Outer {
+class Outer2 {
 
     int outNum = 100;
     static int sNum = 200;
@@ -12,7 +12,7 @@ class Outer {
 
         int num = 100;
 
-        class MyRunnable implements Runnable {
+        return new Runnable() {
 
             int localNum = 10;
 
@@ -27,19 +27,30 @@ class Outer {
                 System.out.println("outNum = " + outNum + "(외부 클래스 인스턴스 변수)");
                 System.out.println("Outer.sNum = " + Outer.sNum + "(외부 클래스 정적 변수)");
             }
-        }
-
-        return new MyRunnable();
+        };
     }
+
+    Runnable runnable = new Runnable() {
+
+        @Override
+        public void run() {
+            System.out.println("Runnable class");
+        }
+    };
 }
 
-public class LocalInnerTest {
+public class AnonymousInnerTest {
 
     public static void main(String[] args) {
 
-        Outer out = new Outer();
+        Outer2 out = new Outer2();
         Runnable runner = out.getRunnable(10);
 
         runner.run();
+
+        System.out.println("======================");
+
+        out.runnable.run();
+
     }
 }
