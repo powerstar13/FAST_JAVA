@@ -35,3 +35,8 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### logging ###
+fine.txt
+log.txt
+warning.txt
